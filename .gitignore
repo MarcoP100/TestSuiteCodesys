@@ -1,0 +1,14 @@
+# CoDeSys build junk
+*.project
+*.workspace
+*.app
+*.compiled-library
+*.target
+*.trace
+.settings/
+.project
+
+# Windows/IDE cache
+*.bak
+*.tmp
+Thumbs.db

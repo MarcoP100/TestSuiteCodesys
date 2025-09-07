@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="" productName="CODESYS" productVersion="CODESYS V3.5 SP21 Patch 2" creationDateTime="2025-09-07T16:10:53.1946689" />
+  <contentHeader name="TestSuite.project" modificationDateTime="2025-09-07T15:30:20.0228435">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous />
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/application" handleUnknown="implementation">
+      <resource name="Application">
+        <task name="Task_test" interval="PT0.02S" priority="1">
+          <pouInstance name="PRG_TestRunner" typeName="">
+            <documentation>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+            </documentation>
+          </pouInstance>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/tasksettings" handleUnknown="implementation">
+              <TaskSettings KindOfTask="Cyclic" Interval="t#20ms" IntervalUnit="ms" WithinSPSTimeSlicing="true">
+                <Watchdog Enabled="false" TimeUnit="ms" Sensitivity="1" />
+              </TaskSettings>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+              <ObjectId>7387523f-4d97-4524-ae3d-70dc243aecb5</ObjectId>
+            </data>
+          </addData>
+        </task>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="PRG_TestRunner" pouType="program">
+              <interface>
+                <localVars>
+                  <variable name="T">
+                    <type>
+                      <derived name="FB_Test_ClampF" />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">T(); // richiama una volta a ciclo
+// controlla T.Failures in watch. 0 = OK.</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>c185f788-e3b5-4a96-a53c-777697ee868a</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Test_ClampF" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="Failures">
+                    <type>
+                      <UDINT />
+                    </type>
+                  </variable>
+                  <variable name="Done">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="_ok">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">// ciclo unico: esegui asserzioni una volta
+IF NOT Done THEN
+    ExpectTrue(ABS(ClampF(5.0, 0.0, 10.0) - 5.0) &lt; 1e-6, '5 in [0,10]');
+    ExpectTrue(ABS(ClampF(-2.0,0.0, 10.0) - 0.0) &lt; 1e-6, '-2 -&gt; 0');
+    ExpectTrue(ABS(ClampF(99.0,0.0, 10.0) - 10.0) &lt; 1e-6, '99 -&gt; 10');
+    ExpectTrue(ABS(ClampF(0.0, 0.0, 10.0) - 0.0) &lt; 1e-6, 'bordo lo');
+    ExpectTrue(ABS(ClampF(10.0,0.0, 10.0) -10.0) &lt; 1e-6, 'bordo hi');
+    Done := TRUE;
+END_IF</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="ExpectTrue" ObjectId="513ab915-d765-4abe-820e-60c79c93fda7">
+                    <interface>
+                      <inputVars>
+                        <variable name="cond">
+                          <type>
+                            <BOOL />
+                          </type>
+                        </variable>
+                        <variable name="msg">
+                          <type>
+                            <string />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF NOT cond THEN
+    Failures := Failures + 1;
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>2700bdc8-98b2-49b9-8927-2d808fc3376b</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="ClampF" pouType="function">
+              <interface>
+                <returnType>
+                  <REAL />
+                </returnType>
+                <inputVars>
+                  <variable name="x">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                  <variable name="lo">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                  <variable name="hi">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">IF x &lt; lo THEN
+    ClampF := lo;
+ELSIF x &gt; hi THEN
+    ClampF := hi;
+ELSE
+    ClampF := x;
+END_IF</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>ff927ef1-9cb9-4487-bc5b-9ffb0df75360</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/libraries" handleUnknown="implementation">
+            <Libraries>
+              <Library Name="#IoStandard" Namespace="IoStandard" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="true" DefaultResolution="IoStandard, 3.5.17.0 (System)" />
+              <Library Name="#3SLicense" Namespace="_3S_LICENSE" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="3SLicense, 0.0.0.0 (CODESYS)" ResolverGuid="97c3b452-d9fa-4ac2-9d0c-3d420aa6d95b" />
+              <Library Name="#CAA Device Diagnosis" Namespace="DED" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="CAA Device Diagnosis, 3.5.21.0 (CAA Technical Workgroup)" />
+              <Library Name="#BreakpointLogging" Namespace="BPLog" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="Breakpoint Logging Functions, * (3S - Smart Software Solutions GmbH)" />
+              <PlaceholderRedirections>
+                <PlaceholderRedirection Placeholder="Standard" Redirection="Standard, 3.5.18.0 (System)" />
+              </PlaceholderRedirections>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>25991dbd-45fc-4b39-9e2c-b0ed87d3a013</ObjectId>
+                </data>
+              </addData>
+            </Libraries>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>c41364d1-c2b9-4fad-b87b-b1496c123bda</ObjectId>
+          </data>
+        </addData>
+      </resource>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="Application" ObjectId="c41364d1-c2b9-4fad-b87b-b1496c123bda">
+          <Object Name="Gestore libreria" ObjectId="25991dbd-45fc-4b39-9e2c-b0ed87d3a013" />
+          <Object Name="PRG_TestRunner" ObjectId="c185f788-e3b5-4a96-a53c-777697ee868a" />
+          <Folder Name="tests">
+            <Object Name="FB_Test_ClampF" ObjectId="2700bdc8-98b2-49b9-8927-2d808fc3376b">
+              <Object Name="ExpectTrue" ObjectId="513ab915-d765-4abe-820e-60c79c93fda7" />
+            </Object>
+          </Folder>
+          <Folder Name="src">
+            <Object Name="ClampF" ObjectId="ff927ef1-9cb9-4487-bc5b-9ffb0df75360" />
+          </Folder>
+          <Object Name="Task_test" ObjectId="7387523f-4d97-4524-ae3d-70dc243aecb5" />
+        </Object>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>
