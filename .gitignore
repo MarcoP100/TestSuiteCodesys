@@ -1,14 +1,17 @@
-# CoDeSys build junk
-*.project
-*.workspace
+# CoDeSys build/cache
 *.app
 *.compiled-library
-*.target
-*.trace
-.settings/
-.project
+*.precompilecache
+*.opt
+*.compileinfo
+*.bootinfo_guids
+*.bootinfo
 
-# Windows/IDE cache
+# Progetti CoDeSys binari
+*.workspace
+*.settings/
+
+# File di sistema
+Thumbs.db
 *.bak
 *.tmp
-Thumbs.db
