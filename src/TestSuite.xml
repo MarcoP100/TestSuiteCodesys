@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="" productName="CODESYS" productVersion="CODESYS V3.5 SP21 Patch 2" creationDateTime="2025-09-07T16:10:53.1946689" />
-  <contentHeader name="TestSuite.project" modificationDateTime="2025-09-07T15:30:20.0228435">
+  <fileHeader companyName="" productName="CODESYS" productVersion="CODESYS V3.5 SP21 Patch 2" creationDateTime="2025-09-08T20:34:16.2473422" />
+  <contentHeader name="TestSuite.project" modificationDateTime="2025-09-08T20:25:53.8656783">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -15,7 +15,9 @@
     </coordinateInfo>
     <addData>
       <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
-        <ProjectInformation />
+        <ProjectInformation>
+          <property name="Project" type="string">TestSuite</property>
+        </ProjectInformation>
       </data>
     </addData>
   </contentHeader>
@@ -46,98 +48,190 @@
             </data>
           </addData>
         </task>
+        <globalVars name="GVL_Logger" constant="true">
+          <variable name="UT_HEADER_PREFIX">
+            <type>
+              <string />
+            </type>
+            <initialValue>
+              <simpleValue value="'=== '" />
+            </initialValue>
+          </variable>
+          <variable name="UT_HEADER_SUFFIX">
+            <type>
+              <string />
+            </type>
+            <initialValue>
+              <simpleValue value="' ==='" />
+            </initialValue>
+          </variable>
+          <variable name="UT_SUMMARY_PREFIX">
+            <type>
+              <string />
+            </type>
+            <initialValue>
+              <simpleValue value="'+++ Test passed: '" />
+            </initialValue>
+          </variable>
+          <variable name="UT_SUMMARY_MID">
+            <type>
+              <string />
+            </type>
+            <initialValue>
+              <simpleValue value="' of '" />
+            </initialValue>
+          </variable>
+          <variable name="UT_SUMMARY_SUFFIX">
+            <type>
+              <string />
+            </type>
+            <initialValue>
+              <simpleValue value="' +++'" />
+            </initialValue>
+          </variable>
+          <variable name="UT_LogFailures">
+            <type>
+              <UINT />
+            </type>
+          </variable>
+          <variable name="UT_TestFailures">
+            <type>
+              <UINT />
+            </type>
+          </variable>
+          <variable name="UT_Log">
+            <type>
+              <array>
+                <dimension lower="0" upper="299" />
+                <baseType>
+                  <string length="100" />
+                </baseType>
+              </array>
+            </type>
+          </variable>
+          <variable name="UT_RowIndex">
+            <type>
+              <UINT />
+            </type>
+            <initialValue>
+              <simpleValue value="0" />
+            </initialValue>
+          </variable>
+          <variable name="UT_LogIndex">
+            <type>
+              <UINT />
+            </type>
+            <initialValue>
+              <simpleValue value="0" />
+            </initialValue>
+          </variable>
+          <variable name="UT_TestIndex">
+            <type>
+              <UINT />
+            </type>
+            <initialValue>
+              <simpleValue value="0" />
+            </initialValue>
+          </variable>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+              <ObjectId>5a689b4b-f695-4760-946f-fd4334e96239</ObjectId>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/mixedattrsvarlist" handleUnknown="implementation">
+              <MixedAttrsVarList>
+                <globalVars name="GVL_Logger" constant="true">
+                  <variable name="UT_HEADER_PREFIX">
+                    <type>
+                      <string />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="'=== '" />
+                    </initialValue>
+                  </variable>
+                  <variable name="UT_HEADER_SUFFIX">
+                    <type>
+                      <string />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="' ==='" />
+                    </initialValue>
+                  </variable>
+                  <variable name="UT_SUMMARY_PREFIX">
+                    <type>
+                      <string />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="'+++ Test passed: '" />
+                    </initialValue>
+                  </variable>
+                  <variable name="UT_SUMMARY_MID">
+                    <type>
+                      <string />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="' of '" />
+                    </initialValue>
+                  </variable>
+                  <variable name="UT_SUMMARY_SUFFIX">
+                    <type>
+                      <string />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="' +++'" />
+                    </initialValue>
+                  </variable>
+                </globalVars>
+                <globalVars name="GVL_Logger">
+                  <variable name="UT_LogFailures">
+                    <type>
+                      <UINT />
+                    </type>
+                  </variable>
+                  <variable name="UT_TestFailures">
+                    <type>
+                      <UINT />
+                    </type>
+                  </variable>
+                  <variable name="UT_Log">
+                    <type>
+                      <array>
+                        <dimension lower="0" upper="299" />
+                        <baseType>
+                          <string length="100" />
+                        </baseType>
+                      </array>
+                    </type>
+                  </variable>
+                  <variable name="UT_RowIndex">
+                    <type>
+                      <UINT />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="0" />
+                    </initialValue>
+                  </variable>
+                  <variable name="UT_LogIndex">
+                    <type>
+                      <UINT />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="0" />
+                    </initialValue>
+                  </variable>
+                  <variable name="UT_TestIndex">
+                    <type>
+                      <UINT />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="0" />
+                    </initialValue>
+                  </variable>
+                </globalVars>
+              </MixedAttrsVarList>
+            </data>
+          </addData>
+        </globalVars>
         <addData>
-          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
-            <pou name="PRG_TestRunner" pouType="program">
-              <interface>
-                <localVars>
-                  <variable name="T">
-                    <type>
-                      <derived name="FB_Test_ClampF" />
-                    </type>
-                  </variable>
-                </localVars>
-              </interface>
-              <body>
-                <ST>
-                  <xhtml xmlns="http://www.w3.org/1999/xhtml">T(); // richiama una volta a ciclo
-// controlla T.Failures in watch. 0 = OK.</xhtml>
-                </ST>
-              </body>
-              <addData>
-                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
-                  <ObjectId>c185f788-e3b5-4a96-a53c-777697ee868a</ObjectId>
-                </data>
-              </addData>
-            </pou>
-          </data>
-          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
-            <pou name="FB_Test_ClampF" pouType="functionBlock">
-              <interface>
-                <localVars>
-                  <variable name="Failures">
-                    <type>
-                      <UDINT />
-                    </type>
-                  </variable>
-                  <variable name="Done">
-                    <type>
-                      <BOOL />
-                    </type>
-                  </variable>
-                  <variable name="_ok">
-                    <type>
-                      <BOOL />
-                    </type>
-                  </variable>
-                </localVars>
-              </interface>
-              <body>
-                <ST>
-                  <xhtml xmlns="http://www.w3.org/1999/xhtml">// ciclo unico: esegui asserzioni una volta
-IF NOT Done THEN
-    ExpectTrue(ABS(ClampF(5.0, 0.0, 10.0) - 5.0) &lt; 1e-6, '5 in [0,10]');
-    ExpectTrue(ABS(ClampF(-2.0,0.0, 10.0) - 0.0) &lt; 1e-6, '-2 -&gt; 0');
-    ExpectTrue(ABS(ClampF(99.0,0.0, 10.0) - 10.0) &lt; 1e-6, '99 -&gt; 10');
-    ExpectTrue(ABS(ClampF(0.0, 0.0, 10.0) - 0.0) &lt; 1e-6, 'bordo lo');
-    ExpectTrue(ABS(ClampF(10.0,0.0, 10.0) -10.0) &lt; 1e-6, 'bordo hi');
-    Done := TRUE;
-END_IF</xhtml>
-                </ST>
-              </body>
-              <addData>
-                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
-                  <Method name="ExpectTrue" ObjectId="513ab915-d765-4abe-820e-60c79c93fda7">
-                    <interface>
-                      <inputVars>
-                        <variable name="cond">
-                          <type>
-                            <BOOL />
-                          </type>
-                        </variable>
-                        <variable name="msg">
-                          <type>
-                            <string />
-                          </type>
-                        </variable>
-                      </inputVars>
-                    </interface>
-                    <body>
-                      <ST>
-                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF NOT cond THEN
-    Failures := Failures + 1;
-END_IF</xhtml>
-                      </ST>
-                    </body>
-                    <addData />
-                  </Method>
-                </data>
-                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
-                  <ObjectId>2700bdc8-98b2-49b9-8927-2d808fc3376b</ObjectId>
-                </data>
-              </addData>
-            </pou>
-          </data>
           <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
             <pou name="ClampF" pouType="function">
               <interface>
@@ -180,13 +274,1137 @@ END_IF</xhtml>
               </addData>
             </pou>
           </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Test_ClampF" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="Done">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">// ciclo unico: esegui asserzioni una volta
+IF NOT Done THEN
+	
+	UT_LogResult(Msg := 'FB_Test_ClampF', Header := TRUE);
+	
+	UT_AssertEqual_REAL(
+					  Actual := ClampF(5.0, 0.0, 10.0),
+					  Expected := 5.0,
+					  label := 'Valore dentro intervallo');
+					  
+	UT_AssertEqual_REAL(
+					  Actual := ClampF(-2.0,0.0, 10.0),
+					  Expected := 0.0,
+					  label := 'Clamp a min');
+					  
+	UT_AssertEqual_REAL(
+					  Actual := ClampF(99.0,0.0, 10.0),
+					  Expected := 10.0,
+					  label := 'Clamp a max');
+				
+	UT_AssertEqual_REAL(
+					  Actual := ClampF(0.0, 0.0, 10.0),
+					  Expected := 0.0,
+					  label := 'Value min');
+				
+	UT_AssertEqual_REAL(
+					  Actual := ClampF(10.0,0.0, 10.0),
+					  Expected := 10.0,
+					  label := 'Value max');
+					  
+	UT_LogResult(End := TRUE);
+	UT_LogResult(Empty := TRUE);
+				  
+	Done := TRUE;
+END_IF</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>2700bdc8-98b2-49b9-8927-2d808fc3376b</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Test_Deadband" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="Done">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">IF NOT Done THEN
+	
+	UT_LogResult(Msg := 'FB_Test_Deadband', 
+				Header := TRUE);
+	
+	UT_AssertEqual_REAL(
+					  Actual := Deadband(0.0, 1.0),
+					  Expected := 0.0,
+					  label := 'Valore dentro la banda');
+					  
+	UT_AssertEqual_REAL(
+					  Actual := Deadband(0.5, 1.0),
+					  Expected := 0.0,
+					  label := 'Valore positivo dentro la banda');
+					  
+	UT_AssertEqual_REAL(
+					  Actual := Deadband(-0.5, 1.0),
+					  Expected := 0.0,
+					  label := 'Valore negativo dentro la banda');
+					  
+	UT_AssertEqual_REAL(
+					  Actual := Deadband(5.0, 1.0),
+					  Expected := 4.0,
+					  label := 'Valore positivo fuori banda');
+				
+	UT_AssertEqual_REAL(
+					  Actual := Deadband(-5.0, 1.0),
+					  Expected := -4.0,
+					  label := 'Valore negativo fuori banda');
+				
+	UT_AssertEqual_REAL(
+					  Actual := Deadband(1.0, 1.0),
+					  Expected := 0.0,
+					  label := 'Value positivo sul bordo');
+					  
+	UT_AssertEqual_REAL(
+					  Actual := Deadband(-1.0, 1.0),
+					  Expected := 0.0,
+					  label := 'Value negativo sul bordo');
+					  
+	UT_LogResult(End := TRUE);
+	UT_LogResult(Empty := TRUE);
+				  
+	Done := TRUE;
+END_IF</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>e81788ae-67e2-4052-a065-abd4e955a932</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="PRG_TestRunner" pouType="program">
+              <interface>
+                <localVars>
+                  <variable name="T1">
+                    <type>
+                      <derived name="FB_Test_ClampF" />
+                    </type>
+                  </variable>
+                  <variable name="T2">
+                    <type>
+                      <derived name="FB_Test_Deadband" />
+                    </type>
+                  </variable>
+                  <variable name="T3">
+                    <type>
+                      <derived name="FB_Test_RateLimiter" />
+                    </type>
+                  </variable>
+                  <variable name="T4">
+                    <type>
+                      <derived name="FB_Test_RateLimiterAdvanced" />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">T1(); // richiama una volta a ciclo
+T2();
+T3();
+T4();
+</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>c185f788-e3b5-4a96-a53c-777697ee868a</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="UT_AssertTrue" pouType="function">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+                <inputVars>
+                  <variable name="Condition">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="Msg">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">IF NOT Condition THEN
+    UT_AssertTrue := FALSE;
+ELSE
+    UT_AssertTrue := TRUE;
+END_IF</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>0f74f26f-d618-431a-8f76-61ddf4a4ca35</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="UT_AssertEqual_REAL" pouType="function">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+                <inputVars>
+                  <variable name="Actual">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                  <variable name="Expected">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                  <variable name="Epsilon">
+                    <type>
+                      <REAL />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="1E-06" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> tolleranza default</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="Label">
+                    <type>
+                      <string />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> breve descrizione del test</xhtml>
+                    </documentation>
+                  </variable>
+                </inputVars>
+                <localVars>
+                  <variable name="ok">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="msg">
+                    <type>
+                      <string length="80" />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">ok := ABS(Actual - Expected) &lt;= Epsilon;
+
+IF ok THEN
+    msg := CONCAT(Label, ' OK');
+ELSE
+    msg := CONCAT(Label, ' FAIL: expected=');
+    msg := CONCAT(msg, REAL_TO_STRING(Expected));
+    msg := CONCAT(msg, ', got=');
+    msg := CONCAT(msg, REAL_TO_STRING(Actual));
+END_IF;
+
+UT_AssertEqual_REAL := UT_LogResult(Ok := ok, Msg := msg);</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>7cfc05c1-03de-4bff-81bc-0aeef46a6760</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="UT_AssertEqual_INT" pouType="function">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+                <inputVars>
+                  <variable name="Actual">
+                    <type>
+                      <INT />
+                    </type>
+                  </variable>
+                  <variable name="Expected">
+                    <type>
+                      <INT />
+                    </type>
+                  </variable>
+                  <variable name="Label">
+                    <type>
+                      <string />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> breve descrizione del test</xhtml>
+                    </documentation>
+                  </variable>
+                </inputVars>
+                <localVars>
+                  <variable name="ok">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="msg">
+                    <type>
+                      <string length="80" />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">ok := Actual = Expected;
+
+IF ok THEN
+    msg := CONCAT(Label, ' OK');
+ELSE
+    msg := CONCAT(Label, ' FAIL: expected=');
+    msg := CONCAT(msg, REAL_TO_STRING(Expected));
+    msg := CONCAT(msg, ', got=');
+    msg := CONCAT(msg, REAL_TO_STRING(Actual));
+END_IF;
+
+UT_AssertEqual_INT := UT_LogResult(Ok := ok, Msg := msg);</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>58c7ed9d-e7f2-444b-b84f-cd528bbc3a80</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="Deadband" pouType="function">
+              <interface>
+                <returnType>
+                  <REAL />
+                </returnType>
+                <inputVars>
+                  <variable name="x">
+                    <type>
+                      <REAL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> valore di ingresso</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="db">
+                    <type>
+                      <REAL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> soglia del deadband (≥0)</xhtml>
+                    </documentation>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">IF ABS(x) &lt; db THEN
+    Deadband := 0.0;
+ELSIF x &gt; 0 THEN
+    Deadband := x - db;
+ELSE
+    Deadband := x + db;
+END_IF</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>ec076ff6-8034-488e-a987-3f2129233f52</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="UT_LogResult" pouType="function">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+                <inputVars>
+                  <variable name="Ok">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="FALSE" />
+                    </initialValue>
+                  </variable>
+                  <variable name="Msg">
+                    <type>
+                      <string />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="''" />
+                    </initialValue>
+                  </variable>
+                  <variable name="Header">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="FALSE" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> true se messaggio di intestazione</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="End">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="FALSE" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">messaggio chiususra</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="Empty">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="FALSE" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> riga vuota</xhtml>
+                    </documentation>
+                  </variable>
+                </inputVars>
+                <localVars>
+                  <variable name="line">
+                    <type>
+                      <string length="100" />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">// costruisci riga con indice
+IF Header THEN
+	UT_TestIndex := 0;
+    UT_TestFailures := 0;
+	line := UT_LogHeader(Msg);
+    UT_LogResult := TRUE;
+	
+ELSIF End THEN
+	
+	line := UT_LogEnd();
+    UT_LogResult := TRUE;
+
+ELSIF Empty THEN
+
+	line := UT_NewLine();
+	UT_LogResult := TRUE;	
+
+ELSE
+	
+	UT_TestIndex := UT_TestIndex + 1;
+	UT_LogIndex := UT_LogIndex + 1;
+	
+	// costruisci riga con indice
+	line := UT_LogTestLine(Msg);
+	
+	// aggiorna contatore fallimenti
+	IF NOT Ok THEN
+		UT_LogFailures := UT_LogFailures + 1;
+		UT_TestFailures := UT_TestFailures + 1;
+	END_IF;
+	
+	UT_LogResult := Ok;
+END_IF
+
+// registra
+IF UT_RowIndex &lt; 300 THEN
+	UT_Log[UT_RowIndex] := line;
+	UT_RowIndex := UT_RowIndex + 1;
+END_IF;</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>b6a39b09-1631-4e4d-820b-7e99f553ad96</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_RateLimiter" pouType="functionBlock">
+              <interface>
+                <inputVars>
+                  <variable name="Input">
+                    <type>
+                      <REAL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> valore richiesto</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="Rate">
+                    <type>
+                      <REAL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> variazione massima per secondo (unità/s)</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="CycleTime">
+                    <type>
+                      <REAL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> tempo di ciclo in secondi</xhtml>
+                    </documentation>
+                  </variable>
+                </inputVars>
+                <outputVars>
+                  <variable name="Output">
+                    <type>
+                      <REAL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> valore limitato</xhtml>
+                    </documentation>
+                  </variable>
+                </outputVars>
+                <localVars>
+                  <variable name="lastOutput">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                  <variable name="maxStep">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">maxStep := Rate * CycleTime;
+
+IF Input &gt; lastOutput + maxStep THEN
+    Output := lastOutput + maxStep;
+ELSIF Input &lt; lastOutput - maxStep THEN
+    Output := lastOutput - maxStep;
+ELSE
+    Output := Input;
+END_IF;
+
+lastOutput := Output;
+
+</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>4a5836e9-c0ad-49fa-a09c-38ac38800219</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Test_RateLimiter" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="Done">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="RL">
+                    <type>
+                      <derived name="FB_RateLimiter" />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> istanza del RateLimiter</xhtml>
+                    </documentation>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">IF NOT Done THEN
+	
+	UT_LogResult(Msg := 'FB_RateLimiter', Header := TRUE);
+
+    // Configurazione di base
+    RL.Rate := 10.0;        // unità/s
+    RL.CycleTime := 0.1;    // s → maxStep = 1 unit/ciclo
+
+    // Step 1: primo ciclo, input = 0
+    RL.Input := 0.0;
+    RL();   // esegue un ciclo
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 0.0, 
+						Label := 'Primo ciclo a 0');
+
+    // Step 2: secondo ciclo, input salta a 5
+    RL.Input := 5.0;
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 1.0, 
+						Label := 'Limitato a +1');
+
+    // Step 3: terzo ciclo, input ancora 5
+    RL.Input := 5.0;
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 2.0, 
+						Label := 'Sale ancora a +2');
+
+    // Step 4: quarto ciclo, input scende a -5
+    RL.Input := -5.0;
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 1.0, 
+						Label := 'Limitato in discesa a +1 step');
+
+    // Step 5: quinto ciclo, input sempre -5
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 0.0, 
+						Label := 'Discesa continua, ora 0');
+						
+	// Step 6: valore negativo
+	RL();
+	UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := -1.0, 
+						Label := 'Discesa continua, ora -1');
+	
+	UT_LogResult(End := TRUE);
+	UT_LogResult(Empty := TRUE);
+	
+    Done := TRUE;
+END_IF</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>128e1251-f316-4718-8952-c1f2eeff1a36</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_RateLimiterAdvanced" pouType="functionBlock">
+              <interface>
+                <inputVars>
+                  <variable name="Input">
+                    <type>
+                      <REAL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> valore richiesto</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="RateUp">
+                    <type>
+                      <REAL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> velocità max di salita [unit/s]</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="RateDown">
+                    <type>
+                      <REAL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> velocità max di discesa [unit/s]</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="CycleTime">
+                    <type>
+                      <REAL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> tempo ciclo [s]</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="Reset">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> forza l'Output = Input</xhtml>
+                    </documentation>
+                  </variable>
+                </inputVars>
+                <outputVars>
+                  <variable name="Output">
+                    <type>
+                      <REAL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> valore limitato</xhtml>
+                    </documentation>
+                  </variable>
+                </outputVars>
+                <localVars>
+                  <variable name="lastOutput">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                  <variable name="stepUp">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                  <variable name="stepDown">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                  <variable name="delta">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">// calcolo passi max
+stepUp   := RateUp * CycleTime;
+stepDown := RateDown * CycleTime;
+
+// gestione reset
+IF Reset THEN
+    Output := Input;
+ELSE
+    // logica di limitazione
+	IF Input &gt;= 0 THEN
+
+		IF lastOutput &lt; 0 THEN
+		
+			IF lastOutput + stepDown &gt;= 0 THEN
+				Output := 0;
+			ELSE
+				Output := lastOutput + stepDown;
+			END_IF
+	
+		ELSE	
+			IF Input &gt; lastOutput + stepUp THEN
+				Output := lastOutput + stepUp;
+			ELSIF Input &lt; lastOutput - stepDown THEN
+				Output := lastOutput - stepDown;
+			ELSE
+				Output := Input;
+			END_IF;
+			
+		END_IF
+		
+	ELSE 
+		IF lastOutput &gt; 0 THEN
+		
+			IF lastOutput - stepDown &lt;= 0 THEN
+				Output := 0;
+			ELSE
+				Output := lastOutput - stepDown;
+			END_IF
+	
+		ELSE	
+			IF Input &lt; lastOutput - stepUp THEN
+				Output := lastOutput - stepUp;
+			ELSIF Input &gt; lastOutput + stepDown THEN
+				Output := lastOutput + stepDown;
+			ELSE
+				Output := Input;
+			END_IF; 	
+		END_IF
+	END_IF			
+END_IF;
+
+lastOutput := Output;</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>c5cfe333-32e9-4894-9269-0cc6c8d9f7c5</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Test_RateLimiterAdvanced" pouType="functionBlock">
+              <interface>
+                <inputVars>
+                  <variable name="Done">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="RL">
+                    <type>
+                      <derived name="FB_RateLimiterAdvanced" />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> istanza del RateLimiter</xhtml>
+                    </documentation>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">IF NOT Done THEN
+	
+	UT_LogResult(Msg := 'FB_RateLimiterAdvanced', Header := TRUE);
+
+    // Configurazione di base
+    RL.RateDown := 6.0;        // unità/s
+	RL.RateUp := 5.0;        // unità/s
+    RL.CycleTime := 1;    // s → maxStep = 1 unit/ciclo
+
+    // Step 1: primo ciclo, input = 0
+    RL.Input := 0.0;
+    RL();   // esegue un ciclo
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 0.0, 
+						Label := 'Start: output deve restare 0');
+
+    // Step 2: input positivo grande → salita limitata da RateUp
+    RL.Input := 7.0;
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 5.0, 
+						Label := 'Salita limitata a +5');
+
+    // Step 3: input ancora positivo → continua la salita
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 7.0, 
+						Label := 'Arriva al target 7');
+
+    // Step 4: input negativo grande → attraversamento verso 0 con RateDown
+    RL.Input := -15.0;
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 1.0, 
+						Label := 'Scende verso 0 limitato da RateDown');
+
+    // Step 5: continua la discesa → deve fermarsi a 0
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 0, 
+						Label := 'Raggiunge lo zero, stop prima di invertire segno');
+						
+	// Step 6: nuovo input negativo piccolo → passa diretto (entro stepDown)
+	RL.Input := -1.3;
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := -1.3, 
+						Label := 'Target -1.3 raggiunto in un passo');
+	
+	// Step 7: input negativo grande → discesa limitata da RateDown					
+	RL.Input := -10.0;
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := -6.3, 
+						Label := 'Discesa limitata a -6.3');
+				
+	RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := -10.0, 
+						Label := 'Arriva al target -10');
+						
+	// Step 8: risalita a input positivo → limitata da RateDown, step by step					
+	RL.Input := 2.0;
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := -4.0, 
+						Label := 'Risalita limitata, step intermedio');
+
+	RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 0.0, 
+						Label := 'Arriva a zero, stop prima di cambiare segno');
+						
+	// === CASI EXTRA ===
+
+    // Caso 9: RateUp = 0 → non può salire
+    RL.RateUp := 0.0;
+    RL.Input  := 10.0;
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 0.0, 
+						Label := 'RateUp=0 → non sale oltre 0');
+
+    // Caso 10: RateDown = 0 → non può scendere
+    RL.RateDown := 0.0;
+    RL.Input    := -10.0;
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 0.0, 
+						Label := 'RateDown=0 → non scende sotto 0');
+
+    // Caso 11: CycleTime diverso da 1 → scaling step
+    RL.RateUp    := 2.0;     // unità/s
+    RL.RateDown  := 2.0;
+    RL.CycleTime := 0.5;     // mezzo secondo → step = 1
+    RL.Input     := 0.0;
+    RL.Reset    := TRUE;     // reset interno manuale
+	RL();
+	
+	RL.Input     := 5.0;
+	RL.Reset    := FALSE;
+    RL();
+    UT_AssertEqual_REAL(Actual := RL.Output, 
+						Expected := 1.0, 
+						Label := 'CycleTime=0.5 → step calcolato correttamente');
+					
+	UT_LogResult(End := TRUE);
+	UT_LogResult(Empty := TRUE);
+	
+    Done := TRUE;
+END_IF</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>3df77bb2-8493-43f2-9d05-8bf64482b3bd</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="UT_StrCatInt" pouType="function">
+              <interface>
+                <returnType>
+                  <string length="100" />
+                </returnType>
+                <inputVars>
+                  <variable name="Base">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                  <variable name="Value">
+                    <type>
+                      <INT />
+                    </type>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">UT_StrCatInt := CONCAT(Base, INT_TO_STRING(Value));</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>09bab7b4-848e-4b7d-94a1-c291800f4b21</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="UT_StrCatReal" pouType="function">
+              <interface>
+                <returnType>
+                  <string length="100" />
+                </returnType>
+                <inputVars>
+                  <variable name="Base">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                  <variable name="Value">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                </inputVars>
+                <localVars>
+                  <variable name="tmp">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">// Converte il REAL in stringa
+tmp := REAL_TO_STRING(Value);
+
+// Se vuoi puoi troncare a 2 decimali, per ora tienilo diretto
+UT_StrCatReal := CONCAT(Base, tmp);</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>200d7e21-e2b5-48c4-b343-5622649190db</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="UT_NewLine" pouType="function">
+              <interface>
+                <returnType>
+                  <string length="2" />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">UT_NewLine := '';</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>7ee5c32b-c82a-4200-8350-a3516c3ff62e</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="UT_LogHeader" pouType="function">
+              <interface>
+                <returnType>
+                  <string length="100" />
+                </returnType>
+                <inputVars>
+                  <variable name="Msg">
+                    <type>
+                      <string length="80" />
+                    </type>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">UT_LogHeader := CONCAT(UT_HEADER_PREFIX, Msg);
+UT_LogHeader := CONCAT(UT_LogHeader, UT_HEADER_SUFFIX);</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>9317cdce-0879-4fff-b492-5a24cb3a4caa</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="UT_LogEnd" pouType="function">
+              <interface>
+                <returnType>
+                  <string length="100" />
+                </returnType>
+                <localVars>
+                  <variable name="line">
+                    <type>
+                      <string length="100" />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">line := CONCAT(UT_SUMMARY_PREFIX, TO_STRING(UT_TestIndex - UT_TestFailures));
+line := CONCAT(line, UT_SUMMARY_MID);
+line := CONCAT(line, TO_STRING(UT_TestIndex));
+line := CONCAT(line, UT_SUMMARY_SUFFIX);
+
+UT_LogEnd := line;</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>eb5e2c1c-d4b2-42e6-8fe8-bc819c029c0e</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="UT_LogTestLine" pouType="function">
+              <interface>
+                <returnType>
+                  <string length="100" />
+                </returnType>
+                <inputVars>
+                  <variable name="Msg">
+                    <type>
+                      <string length="30" />
+                    </type>
+                  </variable>
+                </inputVars>
+                <localVars>
+                  <variable name="line">
+                    <type>
+                      <string length="50" />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">line := CONCAT('[', TO_STRING(UT_TestIndex));
+line := CONCAT(line, '] ');
+line := CONCAT(line, Msg);
+
+UT_LogTestLine := line;</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>29a46d46-c9a9-403f-93ab-856271421210</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
           <data name="http://www.3s-software.com/plcopenxml/libraries" handleUnknown="implementation">
             <Libraries>
               <Library Name="#IoStandard" Namespace="IoStandard" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="true" DefaultResolution="IoStandard, 3.5.17.0 (System)" />
               <Library Name="#3SLicense" Namespace="_3S_LICENSE" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="3SLicense, 0.0.0.0 (CODESYS)" ResolverGuid="97c3b452-d9fa-4ac2-9d0c-3d420aa6d95b" />
               <Library Name="#CAA Device Diagnosis" Namespace="DED" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="CAA Device Diagnosis, 3.5.21.0 (CAA Technical Workgroup)" />
               <Library Name="#BreakpointLogging" Namespace="BPLog" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="Breakpoint Logging Functions, * (3S - Smart Software Solutions GmbH)" />
+              <Library Name="#Standard" Namespace="Standard" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Standard, * (System)" />
               <PlaceholderRedirections>
+                <PlaceholderRedirection Placeholder="MemoryBlockManager" Redirection="Memory Block Manager, 3.5.21.0 (CODESYS)" />
                 <PlaceholderRedirection Placeholder="Standard" Redirection="Standard, 3.5.18.0 (System)" />
               </PlaceholderRedirections>
               <addData>
@@ -205,17 +1423,34 @@ END_IF</xhtml>
     <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
       <ProjectStructure>
         <Object Name="Application" ObjectId="c41364d1-c2b9-4fad-b87b-b1496c123bda">
-          <Object Name="Gestore libreria" ObjectId="25991dbd-45fc-4b39-9e2c-b0ed87d3a013" />
-          <Object Name="PRG_TestRunner" ObjectId="c185f788-e3b5-4a96-a53c-777697ee868a" />
-          <Folder Name="tests">
-            <Object Name="FB_Test_ClampF" ObjectId="2700bdc8-98b2-49b9-8927-2d808fc3376b">
-              <Object Name="ExpectTrue" ObjectId="513ab915-d765-4abe-820e-60c79c93fda7" />
-            </Object>
-          </Folder>
           <Folder Name="src">
             <Object Name="ClampF" ObjectId="ff927ef1-9cb9-4487-bc5b-9ffb0df75360" />
+            <Object Name="Deadband" ObjectId="ec076ff6-8034-488e-a987-3f2129233f52" />
+            <Object Name="FB_RateLimiter" ObjectId="4a5836e9-c0ad-49fa-a09c-38ac38800219" />
+            <Object Name="FB_RateLimiterAdvanced" ObjectId="c5cfe333-32e9-4894-9269-0cc6c8d9f7c5" />
           </Folder>
+          <Folder Name="tests">
+            <Object Name="FB_Test_ClampF" ObjectId="2700bdc8-98b2-49b9-8927-2d808fc3376b" />
+            <Object Name="FB_Test_Deadband" ObjectId="e81788ae-67e2-4052-a065-abd4e955a932" />
+            <Object Name="FB_Test_RateLimiter" ObjectId="128e1251-f316-4718-8952-c1f2eeff1a36" />
+            <Object Name="FB_Test_RateLimiterAdvanced" ObjectId="3df77bb2-8493-43f2-9d05-8bf64482b3bd" />
+          </Folder>
+          <Object Name="PRG_TestRunner" ObjectId="c185f788-e3b5-4a96-a53c-777697ee868a" />
+          <Object Name="Gestore libreria" ObjectId="25991dbd-45fc-4b39-9e2c-b0ed87d3a013" />
           <Object Name="Task_test" ObjectId="7387523f-4d97-4524-ae3d-70dc243aecb5" />
+          <Folder Name="Utility">
+            <Object Name="UT_AssertTrue" ObjectId="0f74f26f-d618-431a-8f76-61ddf4a4ca35" />
+            <Object Name="UT_AssertEqual_REAL" ObjectId="7cfc05c1-03de-4bff-81bc-0aeef46a6760" />
+            <Object Name="UT_AssertEqual_INT" ObjectId="58c7ed9d-e7f2-444b-b84f-cd528bbc3a80" />
+            <Object Name="UT_LogResult" ObjectId="b6a39b09-1631-4e4d-820b-7e99f553ad96" />
+            <Object Name="UT_StrCatInt" ObjectId="09bab7b4-848e-4b7d-94a1-c291800f4b21" />
+            <Object Name="UT_StrCatReal" ObjectId="200d7e21-e2b5-48c4-b343-5622649190db" />
+            <Object Name="UT_NewLine" ObjectId="7ee5c32b-c82a-4200-8350-a3516c3ff62e" />
+            <Object Name="UT_LogHeader" ObjectId="9317cdce-0879-4fff-b492-5a24cb3a4caa" />
+            <Object Name="UT_LogEnd" ObjectId="eb5e2c1c-d4b2-42e6-8fe8-bc819c029c0e" />
+            <Object Name="UT_LogTestLine" ObjectId="29a46d46-c9a9-403f-93ab-856271421210" />
+          </Folder>
+          <Object Name="GVL_Logger" ObjectId="5a689b4b-f695-4760-946f-fd4334e96239" />
         </Object>
       </ProjectStructure>
     </data>
